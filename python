@@ -1,0 +1,11 @@
+x =int(input("digite em numero"))
+y = int(input("digite outro número:"))
+
+print("A soma dos números é:", x+y)
+
+num1 = int(input("digite um número;"))
+num2 = int(input("digite outro número"))
+num3 = int(input("digite mais em números;"))
+
+media = (num1 + num2 + num3)/3
+print("A média dos números é: {media:2f}")
