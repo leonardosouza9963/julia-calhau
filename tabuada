@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    
+    // Solicita um número do usuário
+    printf("Digite um número para ver a sua tabuada: ");
+    scanf("%d", &N);
+    
+    // Mostra a tabuada do número N
+    printf("Tabuada de %d:\n", N);
+    int a = 1;
+    while (a <= 10) {
+        printf("%d x %d = %d\n", N, a, N * a);
+        a++;
+    }
+    
+    return 0;
+}
