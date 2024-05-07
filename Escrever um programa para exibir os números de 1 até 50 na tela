@@ -1,0 +1,11 @@
+Escrever um programa para exibir os números de 1 até 50 na tela.
+#include <stdio.h>
+int main() {
+    int a = 1;
+    while (a <= 50) {
+        printf("%d \n", a);
+        a += 1;
+    }
+    printf("Acabou! \n");
+    return 0;
+}
