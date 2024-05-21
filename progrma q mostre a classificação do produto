@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int codigo;
+    
+    printf("Digite o código do produto: ");
+    scanf("%d", &codigo);
+    
+    // Verificando a classificação do produto
+    if (codigo >= 100 && codigo <= 199) {
+        printf("O produto pertence à categoria Alimento.\n");
+    } else if (codigo >= 200 && codigo <= 299) {
+        printf("O produto pertence à categoria Vestuário.\n");
+    } else if (codigo >= 300 && codigo <= 399) {
+        printf("O produto pertence à categoria Higiene Pessoal.\n");
+    } else if (codigo >= 400 && codigo <= 499) {
+        printf("O produto pertence à categoria Limpeza e Utensílios Domésticos.\n");
+    } else {
+        printf("Código de produto inválido.\n");
+    }
+    
+    return 0;
+}
