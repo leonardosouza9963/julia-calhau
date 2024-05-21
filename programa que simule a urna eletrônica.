@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main() {
+    int votos_steve = 0, votos_gates = 0, votos_linus = 0, votos_nulos = 0, votos_brancos = 0, total_votos = 0;
+    int voto;
+    
+    while (1) {
+        printf("As opções são:\n");
+        printf("1. Candidato Steve Jobs\n");
+        printf("2. Candidato Bill Gates\n");
+        printf("3. Candidato Linus Torvalds\n");
+        printf("4. Nulo\n");
+        printf("5. Branco\n");
+        printf("6. Encerrar e mostrar resultados\n");
+        printf("Entre com o seu voto: ");
+        scanf("%d", &voto);
+        
+        if (voto == 1) {
+            votos_steve++;
+            total_votos++;
+        } else if (voto == 2) {
+            votos_gates++;
+            total_votos++;
+        } else if (voto == 3) {
+            votos_linus++;
+            total_votos++;
+        } else if (voto == 4) {
+            votos_nulos++;
+            total_votos++;
+        } else if (voto == 5) {
+            votos_brancos++;
+            total_votos++;
+        } else if (voto == 6) {
+            printf("\nResultados:\n");
+            printf("Votos para Steve Jobs: %d\n", votos_steve);
+            printf("Votos para Bill Gates: %d\n", votos_gates);
+            printf("Votos para Linus Torvalds: %d\n", votos_linus);
+            printf("Votos nulos: %d (%.2f%%)\n", votos_nulos, (float)votos_nulos / total_votos * 100);
+            printf("Votos brancos: %d (%.2f%%)\n", votos_brancos, (float)votos_brancos / total_votos * 100);
+            
+            // Determinando o candidato vencedor
+            if (votos_steve > votos_gates && votos_steve > votos_linus)
+                printf("Candidato vencedor: Steve Jobs\n");
+            else if (votos_gates > votos_steve && votos_gates > votos_linus)
+                printf("Candidato vencedor: Bill Gates\n");
+            else if (votos_linus > votos_steve && votos_linus > votos_gates)
+                printf("Candidato vencedor: Linus Torvalds\n");
+            else
+                printf("Houve um empate entre os candidatos\n");
+            
+            break;
+        } else {
+            printf("Opção inválida. Por favor, escolha uma opção válida.\n");
+        }
+    }
+    
+    return 0;
+}
