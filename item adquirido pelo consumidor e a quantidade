@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int codigo;
+    float valor_pagar;
+    int quantidade;
+
+    // Leitura do código do item e da quantidade
+    printf("Digite o código do item: ");
+    scanf("%d", &codigo);
+    printf("Digite a quantidade: ");
+    scanf("%d", &quantidade);
+
+    // Calculando o valor a pagar com base no código do item
+    switch (codigo) {
+        case 1:
+            valor_pagar = 5.00 * quantidade;
+            break;
+        case 2:
+            valor_pagar = 7.50 * quantidade;
+            break;
+        case 3:
+            valor_pagar = 10.00 * quantidade;
+            break;
+        case 4:
+            valor_pagar = 3.00 * quantidade;
+            break;
+        case 5:
+            valor_pagar = 4.50 * quantidade;
+            break;
+        default:
+            printf("Código de item inválido.\n");
+            return 1; // Encerra o programa
+    }
+
+    // Exibindo o valor a pagar
+    printf("Valor a pagar: R$ %.2f\n", valor_pagar);
+
+    return 0;
+}
