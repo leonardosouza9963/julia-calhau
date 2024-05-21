@@ -1,0 +1,28 @@
+ #include <stdio.h>
+
+void menu() {
+    printf("Selecione uma opção:\n");
+    printf("1. Opção 1\n");
+    printf("0. Sair\n");
+}
+
+int main() {
+    char opcao;
+
+    while (1) {
+        menu();
+        printf("Digite o número da opção desejada: ");
+        scanf(" %c", &opcao);
+
+        if (opcao == '1') {
+            printf("Você selecionou a Opção 1\n");
+        } else if (opcao == '0') {
+            printf("Saindo do programa...\n");
+            break;
+        } else {
+            printf("Opção inválida. Por favor, selecione 1 ou 0.\n");
+        }
+    }
+
+    return 0;
+}
