@@ -1,0 +1,30 @@
+ #include <stdio.h>
+
+int main() {
+    int contador = 0;
+    float numero, soma = 0.0, media;https:
+
+    printf("Digite um número real maior que zero (ou zero para sair):\n");
+
+    do {
+        scanf("%f", &numero);
+
+        if (numero > 0) {
+            soma += numero;
+            contador++;
+        } else if (numero < 0) {
+            printf("Por favor, digite apenas números maiores que zero.\n");
+        }
+
+    } while (numero != 0);
+
+    if (contador > 0) {
+        media = soma / contador;
+        printf("Total de números digitados: %d\n", contador);
+        printf("Média dos números digitados: %.2f\n", media);
+    } else {
+        printf("Nenhum número válido foi digitado.\n");
+    }
+
+    return 0;
+}
